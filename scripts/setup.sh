@@ -18,7 +18,7 @@ sudo pacman --noconfirm -Sy archlinux-keyring
 sudo pacman --noconfirm -Syu
 sudo pacman --noconfirm -S base base-devel
 
-grep -v '^#' "$dots$"/packages | grep . | while read -r line; do
+grep -v '^#' "$dots"/packages | grep . | while read -r line; do
   sudo pacman --noconfirm -S "$line"
 done
 
@@ -35,6 +35,17 @@ yes | makepkg -si
 #
 git clone https://git.keleti.dev/st "$inst"/st
 cd "$inst"/st && git checkout custom && sudo make clean install
+
+#
+# install xscreenlock
+#
+git clone https://github.com/google/xsecurelock.git "$inst"/xscreenlock
+cd "$inst"/xsecurelock
+sh autogen.sh
+./configure --with-pam-service-name=xscreensaver
+make
+sudo make install
+sudo cp "$dots"/scripts/saver_feh /usr/local/libexec/xsecurelock/
 
 #
 # make some directories

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+env XSECURELOCK_SAVER=saver_feh XSECURELOCK_DISCARD_FIRST_KEYPRESS=0 xsecurelock

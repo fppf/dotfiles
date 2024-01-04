@@ -25,4 +25,5 @@ ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
 ln -sf "$conf"/polybar.ini "$HOME"/.config/polybar/config.ini
 
 ln -sf "$scripts"/wp.sh     "$HOME"/.local/bin/wp
+ln -sf "$scripts"/lock.sh   "$HOME"/.local/bin/lock
 ln -sf "$scripts"/ufetch.sh "$HOME"/.local/bin/ufetch

@@ -18,6 +18,10 @@ super + Escape
 super + alt + p
   killall polybar && polybar
 
+# lock screen
+super + shift + x
+  lock
+
 #
 # bspwm hotkeys
 #
