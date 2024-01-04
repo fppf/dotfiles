@@ -4,7 +4,7 @@
 setxkbmap -option compose:menu
 
 # background
-feh --bg-scale "$HOME"/.wall/"$(ls | shuf -n1)"
+feh --bg-scale "$HOME"/.wall/"$(ls $HOME/.wall/ | shuf -n1)"
 
 # composite
 picom -b
@@ -15,5 +15,4 @@ wmname LG3D
 
 # start dwm
 exec dwm
-#exec i3
 
