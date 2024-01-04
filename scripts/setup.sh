@@ -13,7 +13,6 @@ sudo -v
 #
 # install packages
 #
-echo 'Installing packages...'
 sudo pacman --noconfirm -Sy archlinux-keyring
 sudo pacman --noconfirm -Syu
 sudo pacman --noconfirm -S base base-devel
@@ -23,12 +22,17 @@ grep -v '^#' "$dots"/packages | grep . | while read -r line; do
 done
 
 #
-# install yay
+# install paru
 #
-echo 'Installing yay...'
-git clone https://aur.archlinux.org/yay.git "$inst"/yay
-cd "$inst"/yay
-yes | makepkg -si
+git clone https://aur.archlinux.org/paru.git "$inst"/paru
+cd "$inst"/paru
+makepkg --noconfirm -si
+sudo pacman --nonconfirm -Rns rust
+
+#
+# install rust
+#
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 #
 # install st
@@ -50,7 +54,6 @@ sudo cp "$dots"/scripts/saver_feh /usr/local/libexec/xsecurelock/
 #
 # make some directories
 #
-echo "Configuring directories in $HOME..."
 mkdir -p "$HOME"/dl
 mkdir -p "$HOME"/tmp
 mkdir -p "$HOME"/.wall
