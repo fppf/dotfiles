@@ -134,11 +134,11 @@ super + {h,j,k,l}
 
 # brightness up
 XF86MonBrightnessUp
-  light -A 1
+  light -A 5
 
 # brightness down
 XF86MonBrightnessDown
-  light -U 1
+  light -U 5
 
 # audio volume up
 XF86AudioRaiseVolume

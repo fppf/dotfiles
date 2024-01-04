@@ -24,14 +24,16 @@ mkdir -p "$HOME"/.config/sxhkd
 mkdir -p "$HOME"/.config/polybar
 mkdir -p "$HOME"/.config/zathura
 mkdir -p "$HOME"/.config/newsboat
+mkdir -p "$HOME"/.config/nvim
 
-ln -sf "$conf"/gitconfig "$HOME"/.config/git/config
-ln -sf "$conf"/bspwmrc   "$HOME"/.config/bspwm/bspwmrc
-ln -sf "$conf"/sxhkdrc   "$HOME"/.config/sxhkd/sxhkdrc
-ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
-ln -sf "$conf"/paru.conf "$HOME"/.config/paru/paru.conf
-ln -sf "$conf"/newsboat  "$HOME"/.config/newsboat/config
+ln -sf "$conf"/gitconfig   "$HOME"/.config/git/config
+ln -sf "$conf"/bspwmrc     "$HOME"/.config/bspwm/bspwmrc
+ln -sf "$conf"/sxhkdrc     "$HOME"/.config/sxhkd/sxhkdrc
+ln -sf "$conf"/zathurarc   "$HOME"/.config/zathura/zathurarc
+ln -sf "$conf"/paru.conf   "$HOME"/.config/paru/paru.conf
+ln -sf "$conf"/newsboat    "$HOME"/.config/newsboat/config
 ln -sf "$conf"/polybar.ini "$HOME"/.config/polybar/config.ini
+ln -sf "$conf"/init.vim    "$HOME"/.config/nvim/init.vim
 
 ln -sf "$scripts"/wp.sh      "$HOME"/.local/bin/wp
 ln -sf "$scripts"/lock.sh    "$HOME"/.local/bin/lock

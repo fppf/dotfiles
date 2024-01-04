@@ -18,6 +18,8 @@ set signcolumn=yes
 set foldmethod=marker
 set foldmarker={{{,}}}
 
+set guicursor=i:block
+
 syntax on
 set noai
 
@@ -41,16 +43,19 @@ endif
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'rust': ['rustfmt'],
-\  'haskell': ['ormolu']
+\  'haskell': ['ormolu'],
+\  'ocaml': ['ocamlformat']
 \}
 let g:ale_linters = {
 \  'rust': ['analyzer'],
-\  'haskell': ['hls', 'hlint']
+\  'haskell': ['hls', 'hlint'],
+\  'ocaml': ['ocamllsp']
 \}
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
-"let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline_extensions = []
+let g:ale_floating_preview = 1
 
 highlight ALEInfo ctermfg=109 cterm=italic
 highlight ALEWarning ctermfg=214 cterm=italic

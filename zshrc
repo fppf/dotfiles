@@ -47,6 +47,8 @@ alias rmswp='rm -f ~/.cache/vim/swap/*'
 alias qq='exit'
 alias pdf='zathura --fork'
 alias x='ranger'
+alias vimm='/usr/bin/vim'
+alias vim='nvim'
 
 cd
 
