@@ -1,4 +1,4 @@
 #!/bin/sh
 
 eval "set -- $(sed 1d ~/.fehbg)"
-feh --window-id="${XSCREENSAVER_WINDOW}" "$4"
+feh --zoom=fill --fullscreen --window-id="${XSCREENSAVER_WINDOW}" "$4"

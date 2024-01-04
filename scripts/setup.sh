@@ -50,7 +50,6 @@ sh autogen.sh
 ./configure --with-pam-service-name=xscreensaver
 make
 sudo make install
-sudo cp "$dots"/scripts/saver_feh /usr/local/libexec/xsecurelock/
 
 #
 # make some directories
