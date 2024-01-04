@@ -60,6 +60,7 @@ mkdir -p "$HOME"/.wall
 mkdir -p "$HOME"/.newsboat
 mkdir -p "$HOME"/.local/bin
 mkdir -p "$HOME"/.cache
+mkdir -p "$HOME"/.config/paru
 mkdir -p "$HOME"/.config/bspwm
 mkdir -p "$HOME"/.config/sxhkd
 mkdir -p "$HOME"/.config/polybar

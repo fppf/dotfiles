@@ -13,26 +13,32 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 
 # utilities
+fzf
+btm
+wget
+tmux
+ncdu
 unzip
 ripgrep
 ranger
 pacgraph
 lostfiles
-wget
-tmux
-fzf
-btm
+imagemagick
 
 # system
 acpi
 pipewire
 pipewire-alsa
 pipewire-pulse
+bluez
+bluez-utils
+pavucontrol
 gst-plugin-pipewire
 pamixer
 dialog
 networkmanager
 wmname
+dhcpcd
 
 # xorg
 xorg-server

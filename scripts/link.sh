@@ -9,7 +9,7 @@ if [ -z "$dots" ]; then
   exit 1
 fi
 
-echo 'Linking files...'
+sudo -v
 
 ln -sf "$dots"/zshenv    "$HOME"/.zshenv
 ln -sf "$dots"/zprofile  "$HOME"/.zprofile
@@ -21,6 +21,7 @@ ln -sf "$dots"/gitconfig "$HOME"/.gitconfig
 ln -sf "$conf"/bspwmrc   "$HOME"/.config/bspwm/bspwmrc
 ln -sf "$conf"/sxhkdrc   "$HOME"/.config/sxhkd/sxhkdrc
 ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
+ln -sf "$conf"/paru.conf "$HOME"/.config/paru/paru.conf
 ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
 ln -sf "$conf"/polybar.ini "$HOME"/.config/polybar/config.ini
 
