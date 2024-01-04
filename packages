@@ -20,6 +20,7 @@ wget
 tmux
 ncdu
 unzip
+rsync
 ripgrep
 ranger
 pacgraph
