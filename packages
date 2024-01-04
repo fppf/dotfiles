@@ -3,6 +3,8 @@ git
 vim
 openssh
 cronie
+usbutils
+fprintd
 man
 
 # shell
