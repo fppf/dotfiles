@@ -15,10 +15,10 @@ sudo -v
 #
 sudo pacman --noconfirm -Sy archlinux-keyring
 sudo pacman --noconfirm -Syu
-sudo pacman --noconfirm -S base base-devel
+sudo pacman --noconfirm --needed -S base base-devel
 
 grep -v '^#' "$dots"/packages | grep . | while read -r line; do
-  sudo pacman --noconfirm -S "$line"
+  sudo pacman --noconfirm --needed -S "$line"
 done
 
 #
@@ -27,7 +27,7 @@ done
 git clone https://aur.archlinux.org/paru.git "$inst"/paru
 cd "$inst"/paru
 makepkg --noconfirm -si
-sudo pacman --nonconfirm -Rns rust
+sudo pacman --noconfirm -Rns rust
 
 #
 # install rust
@@ -43,7 +43,7 @@ cd "$inst"/st && git checkout custom && sudo make clean install
 #
 # install xscreenlock
 #
-git clone https://github.com/google/xsecurelock.git "$inst"/xscreenlock
+git clone https://github.com/google/xsecurelock.git "$inst"/xsecurelock
 cd "$inst"/xsecurelock
 sh autogen.sh
 ./configure --with-pam-service-name=xscreensaver
@@ -57,8 +57,9 @@ sudo cp "$dots"/scripts/saver_feh /usr/local/libexec/xsecurelock/
 mkdir -p "$HOME"/dl
 mkdir -p "$HOME"/tmp
 mkdir -p "$HOME"/.wall
+mkdir -p "$HOME"/.newsboat
+mkdir -p "$HOME"/.local/bin
 mkdir -p "$HOME"/.cache
-mkdir -p "$HOME"/.config
 mkdir -p "$HOME"/.config/bspwm
 mkdir -p "$HOME"/.config/sxhkd
 mkdir -p "$HOME"/.config/polybar

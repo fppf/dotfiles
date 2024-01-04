@@ -31,7 +31,7 @@ xorg-fonts
 xorg-xinit
 xdg-utils
 xorg-xmodmap
-xorg-setkbmap
+xorg-setxkbmap
 libx11
 libxft
 
