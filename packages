@@ -42,6 +42,7 @@ picom
 light
 dmenu
 polybar
+xss-lock
 xscreensaver
 
 # media
