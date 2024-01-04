@@ -17,8 +17,6 @@ nnoremap k gk
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
-Plug 'chriskempson/base16-vim'
-Plug 'arthurxavierx/vim-unicoder'
 call plug#end()
 
 colo nord
