@@ -7,11 +7,15 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="yyyy-mm-dd"
 ZLE_RPROMPT_INDENT=1
-#SAVEHIST=50
-HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST="$HISTSIZE"
+HISTFILE="$HOME/.zsh_history"
+setopt hist_ignore_all_dups
 setopt histignorespace
 setopt HIST_IGNORE_SPACE
+setopt HIST_IGNORE_DUPS
 setopt no_auto_remove_slash
+setopt appendhistory
 unsetopt BEEP
 
 # check colors with for code ({000..255}) print -P -- "$code: %F{$code}hi%f"
@@ -81,6 +85,8 @@ alias gg='git config user.email "rkeleti22@gmail.com" && git config user.name "r
 source /etc/profile
 
 bindkey "^[[H" beginning-of-line
-bindkey "^[[F" end-of-line
+#bindkey "^[[F" end-of-line
+bindkey "[4~" end-of-line
 
 cd
+
