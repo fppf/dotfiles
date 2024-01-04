@@ -11,14 +11,6 @@ uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "${SHELL}")"
 block="███"
-clrscr=''
-
-while getopts 'c' opt; do
-  case "${opt}" in
-    c) clrscr=true ;;
-    *) ;;
-  esac
-done
 
 ## UI DETECTION
 
@@ -65,10 +57,6 @@ colors() {
 }
 
 ## OUTPUT
-
-if [ -n "${clrscr}" ]; then
-  clear
-fi
 
 cat <<EOF
 
