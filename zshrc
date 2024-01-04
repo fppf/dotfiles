@@ -40,13 +40,13 @@ bindkey "^[[H" beginning-of-line
 bindkey "[4~" end-of-line
 bindkey "^[[P" delete-char
 
-alias ..="cd ../"
-alias ...="cd ../../"
-alias ls="ls --color=auto"
-alias rmswp="rm -f ~/.cache/vim/swap/*"
-alias qq="exit"
-alias pdf="zathura --fork"
-alias x="ranger"
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ls='ls --color=auto'
+alias rmswp='rm -f ~/.cache/vim/swap/*'
+alias qq='exit'
+alias pdf='zathura --fork'
+alias x='ranger'
 
 cd
 

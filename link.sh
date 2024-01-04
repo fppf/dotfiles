@@ -18,4 +18,6 @@ ln -sf "$DOTS"/xinitrc  "$HOME"/.xinitrc
 ln -sf "$DOTS"/config/zathurarc "$HOME"/.config/zathura/zathurarc
 ln -sf "$DOTS"/config/newsboat  "$HOME"/.newsboat/config
 
+ln -sf "$DOTS"/script/wp.sh "$HOME"/.local/bin/wp
+
 
