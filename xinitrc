@@ -24,5 +24,5 @@ export AWT_TOOLKIT=MToolkit
 wmname LG3D
 
 # start dwm
-exec dwm
+startdwm
 

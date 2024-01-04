@@ -20,6 +20,7 @@ ln -sf "$dots"/xinitrc   "$HOME"/.xinitrc
 ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
 ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
 
-ln -sf "$scripts"/wp.sh     "$HOME"/.local/bin/wp
-ln -sf "$scripts"/ufetch.sh "$HOME"/.local/bin/ufetch
+ln -sf "$scripts"/wp.sh       "$HOME"/.local/bin/wp
+ln -sf "$scripts"/ufetch.sh   "$HOME"/.local/bin/ufetch
+ln -sf "$scripts"/startdwm.sh "$HOME"/.local/bin/startdwm
 
