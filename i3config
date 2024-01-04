@@ -15,7 +15,7 @@ bindsym $mod+Shift+i gaps inner current minus 5
 bindsym $mod+o gaps outer current plus 5
 bindsym $mod+Shift+o gaps outer current minus 5
 bindsym $mod+Shift+a gaps outer current set 0; gaps inner current set 0
-bindsym $mod+Shift+x exec --no-startup-id i3lock --color 101218
+bindsym $mod+Shift+x exec --no-startup-id i3lock --color 101218 --show-failed-attempts
 bindsym $mod+space exec --no-startup-id rofi -show run
 
 for_window [class="^.*"] border pixel 2
