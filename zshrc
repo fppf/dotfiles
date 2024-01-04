@@ -25,7 +25,7 @@ case $(tty) in
   (/dev/tty[1-9]) setfont /usr/share/kbd/consolefonts/ter-114n.psf.gz;
                   export PROMPT="[%n %y %~]%# ";
                   export RPROMPT="[%?]" ;;
-              (*) export PROMPT="%F{10}%n %F{5}%~%f> ";
+              (*) export PROMPT=" %F{10}%~%f » ";
                   export RPROMPT="[%F{9}%?%f]" ;;
 esac
 
