@@ -2,7 +2,6 @@
 """ plugins:
 """   - https://github.com/vim-airline/vim-airline
 """   - https://github.com/dense-analysis/ale
-"""   - https://github.com/flazz/vim-colorschemes
 """
 
 set nocp
@@ -39,10 +38,6 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-set termguicolors
-
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'rust': ['rustfmt'],
@@ -61,4 +56,9 @@ highlight ALEInfo ctermfg=109 cterm=italic
 highlight ALEWarning ctermfg=214 cterm=italic
 highlight ALEError ctermfg=167 cterm=italic
 
-colorscheme Dark
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+colorscheme gruvbox
+set bg=dark
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE

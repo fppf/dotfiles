@@ -30,9 +30,10 @@ makepkg --noconfirm -si
 sudo pacman --noconfirm -Rns rust
 
 #
-# install rust
+# install rust, haskell
 #
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
 #
 # install st
@@ -76,5 +77,4 @@ sh "$dots"/scripts/link.sh "$dots"
 git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline
 mkdir -p ~/.vim/pack/git-plugins/start
 git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-mkdir -p ~/.vim/pack/flazz/start
-git clone https://github.com/flazz/vim-colorschemes.git ~/.vim/pack/flazz/start/colorschemes
+git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox
