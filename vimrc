@@ -46,20 +46,24 @@ let g:ale_fixers = {
 \  'haskell': ['ormolu'],
 \  'ocaml': ['ocamlformat'],
 \  'cpp': ['clang-format'],
-\  'python': ['black']
 \}
 let g:ale_linters = {
 \  'rust': ['analyzer'],
 \  'haskell': ['hls', 'hlint'],
 \  'ocaml': ['ocamllsp'],
-\  'cpp': ['clang'],
-\  'javascript': ['tsserver']
+\  'cpp': ['clang']
 \}
 let g:ale_fix_on_save = 1
+let g:ale_lint_on_save = 1
 let g:ale_sign_column_always = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline_extensions = []
-let g:ale_floating_preview = 1
+"let g:ale_floating_preview = 1
+"let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
+let g:ale_haskell_ormolu_options="--stdin-input-file ."
+let g:ale_virtualtext_cursor = 'current'
+let g:ale_use_neovim_diagnostics_api = 0
+let g:ale_completion_enabled = 1
 
 highlight ALEInfo ctermfg=109 cterm=italic
 highlight ALEWarning ctermfg=214 cterm=italic

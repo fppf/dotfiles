@@ -18,6 +18,9 @@ wmname LG3D
 
 #/usr/bin/prime-offload
 
+# Allow tapping
+xinput set-prop 10 "libinput Tapping Enabled" 1
+
 # start bspwm
 picom --backend glx --fade-exclude 'class_g = "xsecurelock"' &
 exec bspwm
