@@ -79,7 +79,7 @@ alias rm="rm -i"
 alias qq="exit"
 alias pdf="zathura --fork"
 alias x="ranger"
-alias gg='git config user.email "rkeleti22@gmail.com" && git config user.name "ryankeleti"'
+alias gg='git config user.email "rgit@ryankeleti.com" && git config user.name "Ryan Keleti"'
 
 #export MAKEFLAGS="-j 8"
 source /etc/profile
