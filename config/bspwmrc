@@ -4,12 +4,13 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 
 $HOME/.config/polybar/launch.sh
 
-#if [[ $(xrandr -q | grep 'DP-4 connected') ]]; then
-#  xrandr --output eDP1 --primary --mode 1920x1200 --output DP4 --mode 2560x1440 --above eDP1
-#fi
+if [[ $(xrandr -q | grep 'DP-2 connected') ]]; then
+  xrandr --output eDP-1 --primary --mode 1920x1200 --output DP-2 --mode 1920x1080 --above eDP-1
+fi
 
 bspc monitor eDP-1 -d I II III IV V
-#bspc monitor DP4 -d EXT
+bspc monitor DP-2 -d EXT
+bspc wm --reorder-monitors eDP-1 DP-2
 
 bspc config border_width         2
 bspc config window_gap           12
