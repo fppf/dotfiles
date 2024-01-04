@@ -1,0 +1,69 @@
+# base
+git
+vim
+openssh
+wget
+
+# lang
+go
+python
+
+# shell
+zsh
+zsh-syntax-highlighting
+zsh-autosuggestions
+
+# cli
+unzip
+ripgrep
+bat
+fd
+exa
+ranger
+pacgraph
+expac
+lostfiles
+
+# system
+acpi
+pulseaudio-alsa
+dialog
+networkmanager
+wmname
+
+# xorg
+xorg-server
+xorg-fonts
+xorg-xinit
+xdg-utils
+xorg-xmodmap
+xorg-setkbmap
+libx11
+libxft
+
+# display
+picom
+light
+
+# media
+sxiv
+feh
+mpv
+zathura
+zathura-pdf-mupdf
+zathura-djvu
+zathura-ps
+
+# font
+terminus-font
+ttf-liberation
+ttf-inconsolata
+
+# browse
+firefox
+newsboat
+
+# tex
+texlive-core
+texlive-latexextra
+

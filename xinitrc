@@ -1,30 +1,19 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
+# compose key
 setxkbmap -option compose:menu
-feh --bg-scale $HOME/.dotfiles/bkg/req2.jpg
 
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
+# background
+feh --bg-scale "$HOME"/.wall/"$(ls | shuf -n1)"
 
-if [ -f $sysresources ]; then
-  xrdb -merge $sysresources
-fi
+# composite
+picom -b
 
-if [ -f $sysmodmap ]; then
-  xmodmap $sysmodmap
-fi
+export _JAVA_AWT_WM_NONREPARENTING=1
+export AWT_TOOLKIT=MToolkit
+wmname LG3D
 
-if [ -f $userresources ]; then
-  xrdb -merge $userresources
-fi
-
-if [ -f $usermodmap ]; then
-  xmodmap $usermodmap
-fi
-
-compton &
-./.dotfiles/polybar/launch.sh
-exec i3
+# start dwm
+exec dwm
+#exec i3
 
