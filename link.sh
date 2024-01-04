@@ -16,6 +16,7 @@ ln -sf "$dots"/zprofile  "$HOME"/.zprofile
 ln -sf "$dots"/zshrc     "$HOME"/.zshrc
 ln -sf "$dots"/vimrc     "$HOME"/.vimrc
 ln -sf "$dots"/xinitrc   "$HOME"/.xinitrc
+ln -sf "$dots"/gitconfig "$HOME"/.gitconfig
 
 ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
 ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
