@@ -2,6 +2,7 @@
 git
 vim
 openssh
+cronie
 
 # shell
 zsh
