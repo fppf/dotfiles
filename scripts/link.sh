@@ -22,6 +22,7 @@ ln -sf "$conf"/bspwmrc   "$HOME"/.config/bspwm/bspwmrc
 ln -sf "$conf"/sxhkdrc   "$HOME"/.config/sxhkd/sxhkdrc
 ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
 ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
+ln -sf "$conf"/polybar.ini "$HOME"/.config/polybar/config.ini
 
 ln -sf "$scripts"/wp.sh     "$HOME"/.local/bin/wp
 ln -sf "$scripts"/ufetch.sh "$HOME"/.local/bin/ufetch

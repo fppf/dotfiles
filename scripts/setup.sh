@@ -45,9 +45,10 @@ mkdir -p "$HOME"/tmp
 mkdir -p "$HOME"/.wall
 mkdir -p "$HOME"/.cache
 mkdir -p "$HOME"/.config
-mkdir -p "$HOME"/.config/zathura
 mkdir -p "$HOME"/.config/bspwm
 mkdir -p "$HOME"/.config/sxhkd
+mkdir -p "$HOME"/.config/polybar
+mkdir -p "$HOME"/.config/zathura
 
 #
 # link files
