@@ -27,7 +27,6 @@ case $(tty) in
                   export RPROMPT="[%?]" ;;
               (*) export PROMPT="%F{10}%n %F{5}%~%f> ";
                   export RPROMPT="[%F{9}%?%f]" ;;
-#source ~/pl10k/powerlevel10k.zsh-theme ;;
 esac
 
 typeset -A ZSH_HIGHLIGHT_STYLES
