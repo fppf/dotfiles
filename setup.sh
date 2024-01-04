@@ -65,14 +65,5 @@ mkdir -p "$HOME"/.config/zathura
 #
 # link files
 #
-echo 'Linking files...'
-ln -sf "$DOTS"/zshenv   "$HOME"/.zshenv
-ln -sf "$DOTS"/zprofile "$HOME"/.zprofile
-ln -sf "$DOTS"/zshrc    "$HOME"/.zshrc
-ln -sf "$DOTS"/vimrc    "$HOME"/.vimrc
-ln -sf "$DOTS"/xinitrc  "$HOME"/.xinitrc
-ln -sf "$DOTS"/inputrc  "$HOME"/.inputrc
-
-ln -sf "$DOTS"/config/zathurarc "$HOME"/.config/zathura/zathurarc
-ln -sf "$DOTS"/config/newsboat  "$HOME"/.newsboat/config
+sh "$DOTS"/link.sh "$DOTS"
 
