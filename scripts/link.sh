@@ -14,7 +14,6 @@ sudo -v
 ln -sf "$dots"/zshenv    "$HOME"/.zshenv
 ln -sf "$dots"/zprofile  "$HOME"/.zprofile
 ln -sf "$dots"/zshrc     "$HOME"/.zshrc
-ln -sf "$dots"/vimrc     "$HOME"/.vimrc
 ln -sf "$dots"/xinitrc   "$HOME"/.xinitrc
 
 mkdir -p "$HOME"/.config/git
@@ -33,7 +32,7 @@ ln -sf "$conf"/zathurarc   "$HOME"/.config/zathura/zathurarc
 ln -sf "$conf"/paru.conf   "$HOME"/.config/paru/paru.conf
 ln -sf "$conf"/newsboat    "$HOME"/.config/newsboat/config
 ln -sf "$conf"/polybar.ini "$HOME"/.config/polybar/config.ini
-ln -sf "$conf"/init.vim    "$HOME"/.config/nvim/init.vim
+ln -sf "$conf"/init.lua    "$HOME"/.config/nvim/init.lua
 
 ln -sf "$scripts"/wp.sh      "$HOME"/.local/bin/wp
 ln -sf "$scripts"/lock.sh    "$HOME"/.local/bin/lock
