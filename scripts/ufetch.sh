@@ -2,7 +2,6 @@
 #
 # ufetch-arch - tiny system info for arch
 # original: https://gitlab.com/jschx/ufetch
-
 os='Arch Linux'
 user="${1:-$USER}"
 host="${2:-$(cat /etc/hostname)}"
@@ -71,4 +70,3 @@ ${c0}  /.\`        \`.\\   ${lc}${uitype}:        ${ic}${ui}${reset}
 EOF
 
 colors
-

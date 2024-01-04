@@ -2,31 +2,25 @@
 git
 vim
 openssh
-wget
-
-# lang
-go
-python
 
 # shell
 zsh
 zsh-syntax-highlighting
 zsh-autosuggestions
 
-# cli
+# utilities
 unzip
 ripgrep
-bat
-fd
-exa
 ranger
 pacgraph
-expac
 lostfiles
+wget
 
 # system
 acpi
-pulseaudio-alsa
+pipewire
+pipewire-alsa
+pamixer
 dialog
 networkmanager
 wmname
@@ -41,9 +35,13 @@ xorg-setkbmap
 libx11
 libxft
 
-# display
+# wm
+bspwm
+sxhkd
 picom
 light
+dmenu
+polybar
 
 # media
 sxiv
@@ -53,17 +51,10 @@ zathura
 zathura-pdf-mupdf
 zathura-djvu
 zathura-ps
+firefox
+newsboat
 
 # font
 terminus-font
 ttf-liberation
 ttf-inconsolata
-
-# browse
-firefox
-newsboat
-
-# tex
-texlive-core
-texlive-latexextra
-

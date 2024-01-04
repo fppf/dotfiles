@@ -5,7 +5,7 @@ conf="$dots"/config
 scripts="$dots"/scripts
 
 if [ -z "$dots" ]; then
-  echo "usage: $0 dotsdir"
+  echo "usage: $0 DOTSDIR"
   exit 1
 fi
 
@@ -18,10 +18,10 @@ ln -sf "$dots"/vimrc     "$HOME"/.vimrc
 ln -sf "$dots"/xinitrc   "$HOME"/.xinitrc
 ln -sf "$dots"/gitconfig "$HOME"/.gitconfig
 
+ln -sf "$conf"/bspwmrc   "$HOME"/.config/bspwm/bspwmrc
+ln -sf "$conf"/sxhkdrc   "$HOME"/.config/sxhkd/sxhkdrc
 ln -sf "$conf"/zathurarc "$HOME"/.config/zathura/zathurarc
 ln -sf "$conf"/newsboat  "$HOME"/.newsboat/config
 
-ln -sf "$scripts"/wp.sh       "$HOME"/.local/bin/wp
-ln -sf "$scripts"/ufetch.sh   "$HOME"/.local/bin/ufetch
-ln -sf "$scripts"/startdwm.sh "$HOME"/.local/bin/startdwm
-
+ln -sf "$scripts"/wp.sh     "$HOME"/.local/bin/wp
+ln -sf "$scripts"/ufetch.sh "$HOME"/.local/bin/ufetch

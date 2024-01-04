@@ -2,7 +2,6 @@
 """ plugins:
 """   - https://github.com/vim-airline/vim-airline
 """   - https://github.com/dense-analysis/ale
-"""   - https://github.com/whonore/Coqtail
 """   - https://github.com/flazz/vim-colorschemes
 """
 
@@ -46,22 +45,20 @@ set termguicolors
 
 let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
-\  'rust': ['rustfmt']
+\  'rust': ['rustfmt'],
+\  'haskell': ['ormolu']
 \}
-let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_linters = {
+\  'rust': ['analyzer'],
+\  'haskell': ['hls', 'hlint']
+\}
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
-let g:airline#extensions#ale#enabled = 1
+"let g:airline#extensions#ale#enabled = 1
+let g:airline_extensions = []
 
 highlight ALEInfo ctermfg=109 cterm=italic
 highlight ALEWarning ctermfg=214 cterm=italic
 highlight ALEError ctermfg=167 cterm=italic
-
-augroup CoqtailHighlights
-  autocmd!
-  autocmd ColorScheme *
-    \  hi def CoqtailChecked guibg=Purple
-    \| hi def CoqtailSent    guibg=Purple
-augroup END
 
 colorscheme Dark

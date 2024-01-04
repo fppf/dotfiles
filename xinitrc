@@ -9,20 +9,13 @@ while true; do
   sleep 10m
 done &
 
-# bar
-while true; do
-  xsetroot -name "  bat: $(acpi | grep -o '[0-9]*%')  //  $(date +'%a %b %d :: %I:%M%P')  "
-  sleep 5s
-done &
-
-# composite
-picom -b
-
-# for java apps
+# java apps
 export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 wmname LG3D
 
-# start dwm
-startdwm
-
+# start bspwm
+picom &
+polybar &
+sxhkd &
+exec bspwm
