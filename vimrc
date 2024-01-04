@@ -1,34 +1,67 @@
-se nocp
-se ff=unix
-se ffs=unix,dos
-se nu
-se ic
-se ru
-se ts=2 sw=2 expandtab
-se belloff=all
+"""
+""" plugins:
+"""   - https://github.com/vim-airline/vim-airline
+"""   - https://github.com/dense-analysis/ale
+"""   - https://github.com/whonore/Coqtail
+"""   - https://github.com/flazz/vim-colorschemes
+"""
 
-sy on
-se noai
+set nocp
+set ff=unix
+set ffs=unix,dos
+set number
+set ignorecase
+set ruler
 
-if has('mouse')
-  se mouse=a
-endif
+set ts=2 sw=2 expandtab
+set belloff=all
+set signcolumn=yes
+
+set foldmethod=marker
+set foldmarker={{{,}}}
+
+syntax on
+set noai
 
 nnoremap j gj
 nnoremap k gk
 
-"curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/owickstrom/vim-colors-paramount'
-call plug#end()
+filetype indent on
+filetype plugin on
 
-filetype indent off
+if has('mouse')
+  set mouse=a
+endif
 
-se foldmethod=marker
-se foldmarker={{{,}}}
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also https://sunaku.github.io/vim-256color-bce.html
+  set t_ut=
+endif
 
-au BufRead,BufNewFile *.v set filetype=coq
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
 
-set bg=dark
-colo paramount
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'rust': ['rustfmt']
+\}
+let g:ale_linters = {'rust': ['analyzer']}
+let g:ale_fix_on_save = 1
+let g:ale_sign_column_always = 1
+let g:airline#extensions#ale#enabled = 1
 
+highlight ALEInfo ctermfg=109 cterm=italic
+highlight ALEWarning ctermfg=214 cterm=italic
+highlight ALEError ctermfg=167 cterm=italic
+
+augroup CoqtailHighlights
+  autocmd!
+  autocmd ColorScheme *
+    \  hi def CoqtailChecked guibg=Purple
+    \| hi def CoqtailSent    guibg=Purple
+augroup END
+
+colorscheme Dark
