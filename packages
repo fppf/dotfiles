@@ -15,6 +15,7 @@ zsh-autosuggestions
 # utilities
 fzf
 btm
+xsv
 wget
 tmux
 ncdu
@@ -57,6 +58,7 @@ picom
 light
 dmenu
 polybar
+redshift
 xss-lock
 xscreensaver
 
@@ -76,3 +78,5 @@ terminus-font
 awesome-terminal-fonts
 ttf-liberation
 ttf-inconsolata
+ttf-dejavu
+adobe-source-han-sans-otc-fonts

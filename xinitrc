@@ -18,6 +18,4 @@ wmname LG3D
 
 # start bspwm
 picom --backend glx --fade-exclude 'class_g = "xsecurelock"' &
-polybar &
-sxhkd &
 exec bspwm

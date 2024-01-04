@@ -16,7 +16,7 @@ super + Escape
 
 # polybar
 super + alt + p
-  killall polybar && polybar
+  killall polybar && ~/.config/polybar/launch.sh
 
 # lock screen
 super + shift + x
@@ -134,19 +134,19 @@ super + {h,j,k,l}
 
 # brightness up
 XF86MonBrightnessUp
-  light -A 5
+  light -A 1
 
 # brightness down
 XF86MonBrightnessDown
-  light -U 5
+  light -U 1
 
 # audio volume up
 XF86AudioRaiseVolume
-  pamixer -i 5
+  pamixer -i 1
 
 # audio volume down
 XF86AudioLowerVolume
-  pamixer -d 5
+  pamixer -d 1
 
 # audio mute
 XF86AudioMute
