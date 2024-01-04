@@ -19,10 +19,16 @@ nnoremap k gk
 
 "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/owickstrom/vim-colors-paramount'
 call plug#end()
 
 filetype indent off
 
 se foldmethod=marker
 se foldmarker={{{,}}}
+
+au BufRead,BufNewFile *.v set filetype=coq
+
+set bg=dark
+colo paramount
 
