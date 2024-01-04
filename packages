@@ -3,6 +3,7 @@ git
 vim
 openssh
 cronie
+man
 
 # shell
 zsh
@@ -16,11 +17,16 @@ ranger
 pacgraph
 lostfiles
 wget
+tmux
+fzf
+btm
 
 # system
 acpi
 pipewire
 pipewire-alsa
+pipewire-pulse
+gst-plugin-pipewire
 pamixer
 dialog
 networkmanager
