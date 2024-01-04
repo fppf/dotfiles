@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WALL="${HOME}/.wall"
+wall="${HOME}/.wall"
 
-feh --no-fehbg --bg-fill --randomize --recursive "${WALL}" 2>/dev/null
+feh --no-fehbg --bg-fill --randomize --recursive "${wall}" 2>/dev/null
 

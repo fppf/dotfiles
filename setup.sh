@@ -4,10 +4,10 @@ set -e
 
 [ "$(id -u)" = "0" ] && echo 'Run as nonroot user' && exit 1
 
-INST="$HOME"/.in
-DOTS="$HOME"/.df
+dots="$HOME"/.df
+inst="$HOME"/.in
 
-mkdir -p "$INST"
+mkdir -p "$inst"
 
 sudo -v
 
@@ -27,19 +27,19 @@ done
 # install yay
 #
 echo 'Installing yay...'
-git clone https://aur.archlinux.org/yay.git "$INST"/yay
-cd "$INST"/yay
+git clone https://aur.archlinux.org/yay.git "$inst"/yay
+cd "$inst"/yay
 yes | makepkg -si
 
 #
 # install suckless
 #
 echo 'Installing dwm, st...'
-git clone https://git.ryankeleti.com/dwm   "$INST"/dwm
-git clone https://git.ryankeleti.com/st    "$INST"/st
+git clone https://git.ryankeleti.com/dwm   "$inst"/dwm
+git clone https://git.ryankeleti.com/st    "$inst"/st
 
-cd "$INST"/dwm   && git checkout custom && sudo make clean install
-cd "$INST"/st    && git checkout custom && sudo make clean install
+cd "$inst"/dwm   && git checkout custom && sudo make clean install
+cd "$inst"/st    && git checkout custom && sudo make clean install
 
 #
 # install rust
@@ -65,5 +65,5 @@ mkdir -p "$HOME"/.config/zathura
 #
 # link files
 #
-sh "$DOTS"/link.sh "$DOTS"
+sh "$dots"/link.sh "$dots"
 
