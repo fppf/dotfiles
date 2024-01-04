@@ -16,6 +16,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 wmname LG3D
 
+#/usr/bin/prime-offload
+
 # start bspwm
 picom --backend glx --fade-exclude 'class_g = "xsecurelock"' &
 exec bspwm

@@ -54,3 +54,9 @@ cd
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+[ -f "/home/ryan/.ghcup/env" ] && source "/home/ryan/.ghcup/env" # ghcup-env
+
+# fnm
+export PATH="/home/ryan/.local/share/fnm:$PATH"
+eval "`fnm env`"

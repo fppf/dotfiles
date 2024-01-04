@@ -44,12 +44,16 @@ let g:ale_fixers = {
 \  '*': ['remove_trailing_lines', 'trim_whitespace'],
 \  'rust': ['rustfmt'],
 \  'haskell': ['ormolu'],
-\  'ocaml': ['ocamlformat']
+\  'ocaml': ['ocamlformat'],
+\  'cpp': ['clang-format'],
+\  'python': ['black']
 \}
 let g:ale_linters = {
 \  'rust': ['analyzer'],
 \  'haskell': ['hls', 'hlint'],
-\  'ocaml': ['ocamllsp']
+\  'ocaml': ['ocamllsp'],
+\  'cpp': ['clang'],
+\  'javascript': ['tsserver']
 \}
 let g:ale_fix_on_save = 1
 let g:ale_sign_column_always = 1
@@ -61,9 +65,25 @@ highlight ALEInfo ctermfg=109 cterm=italic
 highlight ALEWarning ctermfg=214 cterm=italic
 highlight ALEError ctermfg=167 cterm=italic
 
+fun! ALEClearBuffer(buffer)
+  if get(g:, 'ale_enabled') && has_key(get(g:, 'ale_buffer_info', {}), a:buffer)
+    call ale#engine#SetResults(a:buffer, [])
+    call ale#engine#Cleanup(a:buffer)
+  endif
+endfun
+
+augroup UnALE
+  autocmd!
+  autocmd TextChanged,TextChangedI,InsertEnter,InsertLeave * call ALEClearBuffer(bufnr('%'))
+augroup END
+
+augroup user_colors
+  autocmd!
+  autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+augroup END
+
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-colorscheme gruvbox
 set bg=dark
 autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
