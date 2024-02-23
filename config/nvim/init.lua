@@ -28,6 +28,7 @@ require('lazy').setup({
   'junegunn/fzf',
   'junegunn/fzf.vim',
   'sainnhe/gruvbox-material',
+  'jceb/vim-orgmode',
 
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
@@ -44,6 +45,7 @@ vim.cmd([[colorscheme gruvbox-material]])
 local lspconfig = require('lspconfig')
 
 lspconfig.rust_analyzer.setup {}
+lspconfig.clangd.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
