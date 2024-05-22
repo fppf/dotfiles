@@ -23,13 +23,31 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
+  -- colorschemes
+  -- 'sainnhe/gruvbox-material',
+  --{ 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'rebelot/kanagawa.nvim', priority = 1000 },
+
   'neovim/nvim-lspconfig',
   'vim-airline/vim-airline',
+
+  {
+    'vimwiki/vimwiki',
+    init = function()
+      vim.g.vimwiki_list = {{
+        path = '~/vimwiki/',
+        syntax = 'markdown',
+        ext = '.md',
+      }}
+      vim.g.vimwiki_global_ext = 0
+    end
+  },
+  'whonore/Coqtail',
+  
   'junegunn/fzf',
   'junegunn/fzf.vim',
-  'sainnhe/gruvbox-material',
-  'jceb/vim-orgmode',
 
+  -- completion
   'hrsh7th/cmp-nvim-lsp',
   'hrsh7th/cmp-buffer',
   'hrsh7th/cmp-path',
@@ -39,8 +57,11 @@ require('lazy').setup({
   'hrsh7th/vim-vsnip',
 })
 
-vim.g.gruvbox_material_background = 'hard'
-vim.cmd([[colorscheme gruvbox-material]])
+-- vim.g.gruvbox_material_background = 'hard'
+-- vim.cmd([[colorscheme gruvbox-material]])
+--vim.cmd.colorscheme 'catppuccin-mocha'
+vim.cmd.colorscheme 'kanagawa'
+--vim.cmd.colorscheme 'habamax'
 
 local lspconfig = require('lspconfig')
 
