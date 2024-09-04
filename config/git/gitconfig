@@ -1,6 +1,0 @@
-[core]
-	editor = vim
-[credential]
-	helper = store
-[http]
-	postBuffer = 157286400
