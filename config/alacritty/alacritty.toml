@@ -1,6 +1,15 @@
+[general]
+import = [
+   "~/.config/alacritty/themes/themes/kanagawa_dragon.toml"
+]
+
 [window]
 decorations = "None"
-padding = { x = 5, y = 5 }
-dynamic_padding = true
-opacity = 0.75
+#padding = { x = 5, y = 5 }
+#dynamic_padding = true
+#opacity = 0.75
 startup_mode = "Maximized"
+
+[font]
+normal = { family = "Iosevka", style = "Regular" }
+
