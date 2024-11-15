@@ -5,9 +5,6 @@ import = [
 
 [window]
 decorations = "None"
-#padding = { x = 5, y = 5 }
-#dynamic_padding = true
-#opacity = 0.75
 startup_mode = "Maximized"
 
 [font]
