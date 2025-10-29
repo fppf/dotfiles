@@ -21,7 +21,7 @@ vim.cmd.colorscheme("gruvbox-material")
 
 vim.lsp.enable({
   "clangd",
-  "rust_analyzer"
+  "rust_analyzer",
 })
 
 vim.diagnostic.config({ virtual_text = true })
